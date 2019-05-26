@@ -1,0 +1,27 @@
+<?php
+
+require __DIR__ . '/data/comic.php';
+require __DIR__ . '/lib/utils.php';
+
+echo 'start cron at : ' . date("Y-m-d H:i:s") . "\r\n";
+
+foreach($comics as $comic) 
+{
+    $key = $comic['key'];
+    
+    $dir = __DIR__ . "/data/" . $key;
+    if (!file_exists($dir)) {
+        mkdir($dir, 0777, true);
+    }
+
+    $fileName = $dir . '/titles.json';
+    
+    $titles = storeTitles($key, $fileName);
+
+    // foreach($titles as $title)
+    // {
+    //     storeImages($key, $title['chapter'], $dir);
+    // }
+}
+
+echo 'stop cron at : ' . date("Y-m-d H:i:s") . "\r\n";
