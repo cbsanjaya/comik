@@ -27,7 +27,8 @@ if ($comic) {
     }
 } else {
     $result = array_map( function($item) {
-        $file = file_get_contents(__DIR__ . "/data/" . $item["key"] . "/titles.json");
+        // $file = file_get_contents(__DIR__ . "/data/" . $item["key"] . "/titles.json");
+        $file = file_get_contents(__DIR__ . "/data/" . $item["key"] . ".json");
         $chapter = json_decode($file);
         $item['last'] = $chapter[0];
         return $item;
