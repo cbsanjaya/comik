@@ -1,13 +1,18 @@
 <template>
-  <q-page class="flex flex-center" style="background-color:black">
-    <div v-for="(image, index) in images" :key="index" class="col-12"
-      style="width:800px;background-color:white;padding:1px;">
+  <q-page style="background-color:black;">
+    <div v-for="(image, index) in images" :key="index" class="comic-image">
       <img :src="image" style="width:100%">
     </div>
   </q-page>
 </template>
 
-<style>
+<style scoped>
+.comic-image {
+  max-width:800px;
+  background-color:white;
+  padding:1px;
+  margin: auto;
+}
 </style>
 
 <script>
