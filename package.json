@@ -1,9 +1,9 @@
 {
   "name": "comic",
   "version": "0.0.1",
-  "description": "Comic Application",
-  "productName": "Comic App",
-  "cordovaId": "com.cbsanjaya.comic",
+  "description": "Free Reading Online Comic",
+  "productName": "Comik",
+  "cordovaId": "com.cbsanjaya.comik",
   "author": "Cahya Bagus Sanjaya <9c96b6@gmail.com>",
   "private": true,
   "scripts": {
