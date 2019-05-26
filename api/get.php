@@ -22,7 +22,8 @@ if ($comic) {
         echo json_encode(getImages($comic, $chapter));
         // showJson(__DIR__ . '/data/' . $comic . '/' . $chapter . '.json');
     } else {
-        showJson(__DIR__ . '/data/' . $comic . '/titles.json');
+        // showJson(__DIR__ . '/data/' . $comic . '/titles.json');
+        showJson(__DIR__ . '/data/' . $comic . '.json');
     }
 } else {
     $result = array_map( function($item) {
